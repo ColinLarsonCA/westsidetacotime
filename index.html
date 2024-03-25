@@ -58,7 +58,9 @@
     const cstTime = new Date(now.getTime() + cstOffset * 60 * 1000);
     const isThursday = cstTime.getUTCDay() === 4;
     const isAfter5pm = cstTime.getUTCHours() >= 17;
-    if (isThursday && isAfter5pm) {
+    const isActuallyTacoTime = isThursday && isAfter5pm;
+    const nom = location.search.includes('nom');
+    if (isActuallyTacoTime || nom) {
         document.getElementById("thursday").innerHTML = "... why aren't you at Shelter already?"
     }
 </script>
