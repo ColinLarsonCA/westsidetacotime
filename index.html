@@ -1,12 +1,18 @@
+<!DOCTYPE html>
+<html>
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Taco time?</title>
 </head>
 
 <style>
-    body {
+    html, body {
         background-color: #F1F0EC;
+        margin: 0;
+        height: 100%;
     }
 
     .container {
@@ -36,12 +42,15 @@
     }
 </style>
 
-<div class="container">
-    <div class="center">
-        <div class="always">YES</div>
-        <div id="thursday" class="its-thursday-my-dudes"></div>
+<body>
+    <div class="container">
+        <div class="center">
+            <div class="always">YES</div>
+            <div id="thursday" class="its-thursday-my-dudes"></div>
+        </div>
     </div>
-</div>
+</body>
+
 
 <script>
     const now = new Date();
@@ -53,3 +62,5 @@
         document.getElementById("thursday").innerHTML = "... why aren't you at Shelter already?"
     }
 </script>
+
+</html>
