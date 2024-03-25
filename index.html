@@ -1,0 +1,55 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background-color: #F1F0EC;
+    }
+
+    .container {
+        height: 100%;
+        position: relative;
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .always {
+        font-size: 240px;
+        font-family: "Roboto", sans-serif;
+        color: #04FFAC;
+    }
+
+    .its-thursday-my-dudes {
+        font-size: 24px;
+        font-family: "Roboto", sans-serif;
+        color: #CB91F7;
+    }
+</style>
+
+<div class="container">
+    <div class="center">
+        <div class="always">YES</div>
+        <div id="thursday" class="its-thursday-my-dudes"></div>
+    </div>
+</div>
+
+<script>
+    const now = new Date();
+    const cstOffset = -6 * 60;
+    const cstTime = new Date(now.getTime() + cstOffset * 60 * 1000);
+    const isThursday = cstTime.getUTCDay() === 4;
+    const isAfter5pm = cstTime.getUTCHours() >= 17;
+    if (isThursday && isAfter5pm) {
+        document.getElementById("thursday").innerHTML = "... why aren't you at Shelter already?"
+    }
+</script>
